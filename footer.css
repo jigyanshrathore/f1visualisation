@@ -1,0 +1,49 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 20px 40px;
+}
+
+footer h3 {
+  color: white;
+  margin: 5px 0px;
+}
+
+footer p {
+  color: grey;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-left {
+  width: 400px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-right li {
+  margin: 3px 0px;
+  font-family: sans-serif;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-right img {
+  width: 50px;
+  height: auto;
+}
+
+.footer-right .fa-github {
+  font-size: 50px;
+}
+

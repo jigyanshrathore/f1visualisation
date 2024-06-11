@@ -1,0 +1,104 @@
+body {
+  background: white;
+}
+
+.body-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+/* Styling Line Graph */
+.graph-container {
+  /* previously 1200px by 500px */
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Styling the results table */
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-table {
+  background-color: #faf8f8;
+  color: #202122;
+  margin: 1em 0;
+  border: 1px solid #a2a9b1;
+}
+
+.results-table th {
+  background-color: #cfd4db;
+  border: 1px solid #a2a9b1;
+}
+
+.results-table>thead>tr>th {
+  padding: 3px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.results-table>tbody>tr>td {
+  border: 1px solid #a2a9b1;
+  background-color: #faf8f8;
+  padding: 0.2em 0.4em;
+  font-family: sans-serif;
+}
+
+.driver-name {
+  font-size: 14px;
+}
+
+.data-cell {
+  text-align: center;
+  font-size: 12px;
+}
+
+#points-cell {
+  background-color: #d7f0d6;
+}
+
+#gold-cell {
+  background-color: gold;
+}
+
+#silver-cell {
+  background-color: silver;
+}
+
+#bronze-cell {
+  background-color: goldenrod;
+}
+
+#no-points-cell {
+  background-color: #CFCFFF;
+}
+
+/* Back Arrow */
+.back-arrow {
+  position: absolute;
+  top: 40px;
+  left: 105px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #faf8f8;
+  border: 1px solid #a2a9b1;
+}
+
+.back-arrow:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+#back-to-main {
+  display: none;
+}
