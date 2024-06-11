@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="application/javascript" src="./dist/main.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/7d1f1445ba.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./dist/main.css">
+  <link rel="icon" type="image/x-icon" href="assets/my_f1_logo.ico">
+  <title>F1 Standings Explorer</title>
+</head>
+
+<header>
+  <img class="banner-f1" src="assets/banner-f1.png" alt="">
+  <h1>F1 Standings Explorer</h1>
+</header>
+
+<body>
+  <div class="body-main">
+    <form class="data-filters">
+      <label class="toggle-label">Driver's</label>
+      <label class="switch" id="championship">
+        <input type="checkbox" id="constructor">
+        <span class="slider round"></span>
+      </label>
+      <label class="toggle-label">Constructor's</label>
+      <label class="buffer">|</label>
+      <label>Select a Season:
+        <select id="season">
+        </select>
+      </label>
+      <label>Start Date:
+        <select id="start-date"></select>
+      </label>
+      <label>End Date
+        <select id="end-date"></select>
+      </label>
+      <button>Submit</button>
+    </form>
+    <div class="graph-container">
+      <canvas id="graph-canvas"></canvas>
+      <div id="explainer-button">
+        <h2>☰ What is F1?</h2>
+      </div>
+      <div id="explainer-modal" class="modal">
+        <div class="modal-content">
+          <span id="explainer-close" class="close">&times;</span>
+          <h1>What is Formula 1?</h1><br>
+          <p>Formula 1 (also known as F1) is the highest class of international racing for open-wheel single-seater
+            formula racing cars. F1 cars are highly engineered, open-cockpit, open-wheel single-seater cars designed
+            specifically for racing. They are the fastest regulated racing cars in the world. The F1 season consists of
+            a series of Grand Prix races held around the world on purpose-built circuits or public roads. There are
+            typically 20-22 races each season. Ten teams, or constructors, field two drivers each for a total
+            of 20 drivers per race.
+          </p><br>
+          <p>
+            The top 10 finishing drivers get points on a scale ranging from 25 points for the
+            winner to 1 point for 10th place and no points for drivers finishing between 11th to 20th. At the end of the
+            year, the constructor with the most points wins the World’s Constructor Championship (WCC) and the driver
+            with the most points wins the World’s Drivers Championship (WDC).</p>
+          <p><br>
+            Each race weekend is structured with practice sessions, qualifying, and the final race. Qualifying
+            determines the starting grid order for the race. Races range in length from 190-310 km (118-193 miles) and
+            last approx 1.5-2 hours. Strategy, pit stops, fuel/tire management are key parts of the competition. The
+            cars rely heavily on aerodynamics and have hybrid engines producing around 1000hp. Iconic F1 teams include
+            Ferrari, McLaren, Mercedes, Williams, Red Bull Racing. Top drivers are global superstars.
+          </p><br>
+          <p>
+            Learn more on the <a href="https://en.wikipedia.org/wiki/Formula_One">Formula 1 Wiki</a>
+          </p><br>
+          <p>
+            Watch Formula 1's "Beginner's Guide to F1" on their official Youtube channel. Video isn't available while
+            embedded but you can watch on youtube.
+          </p><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Q-jjZMMxbZs?si=ak84YoGqjqoHvAtj"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div id="instructions">
+        <h2 id="instructions-menu">☰ Instructions</h2>
+        <ul id="instructions-list">
+          <li>Toggle between Driver and Constructor's Championship</li>
+          <li>Select which season to get results for</li>
+          <li>Filter races mid-year to see how teams performed during a range</li>
+          <li>Click on a Driver to see Qualifying and Race positions</li>
+          <li>Click on the back arrow to return to main view</li>
+        </ul>
+      </div>
+      <div id="back-to-main">
+        <i class="fa-solid fa-arrow-left back-arrow"></i>
+      </div>
+    </div>
+    <div class="table-container">
+    </div>
+  </div>
+</body>
+
+<footer>
+  <div class="footer-left">
+    <h3>Disclaimer</h3>
+    <p>All rights reserved to Formula 1, FIA, and whoever owns respective IP. I do not claim any IP as my own.</p>
+    <p>Credits to <a href="https://ergast.com/mrd/">Ergast API</a> for F1 data.</p>
+  </div>
+  <ul class="footer-right">
+    <li><a href="https://github.com/juliouribe" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/julio-uribe-a15736b5/" target="_blank" rel="noopener noreferrer"><img
+          src="assets/linkedin.png" alt=""></a>
+    </li>
+  </ul>
+</footer>
+
+</html>
